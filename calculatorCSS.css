@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); /* Increased shadow for the calculator */
+    width: 320px; /* Fixed width of the calculator */
+    padding: 20px;
+}
+
+#display {
+    width: calc(100% - 20px); /* Adjusted to fit within padding */
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the display */
+    margin-bottom: 10px; /* Space below the display */
+    background-color: #222;
+    color: #fff;
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Increased shadow for display */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Spacing between buttons */
+}
+
+.btn {
+    background-color: #555; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    font-size: 20px; /* Slightly larger font */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 2px 15px rgba(0, 0, 0, 0.3); /* Increased shadow for buttons */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #777; /* Change color on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Button active effect */
+.btn:active {
+    transform: translateY(2px); /* Button presses down */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Reduce shadow on click */
+}
+
+/* Operator button styles */
+.operator {
+    background-color: #0056b3; /* Blue color for operator buttons */
+}
+
+.operator:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
